@@ -1,0 +1,52 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+        결과
+
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        {% if player.id_in_group == 1 %}
+
+               당신은 {{ Constants.endowment }} 부여받았고, 이중 {{ group.amount_offered }} 만큼을 상대방에게 제안했습니다.
+
+            {% if group.offer_accepted %}
+
+                    당신의 제안은 수용되었습니다.
+
+            {% else %}
+
+                     당신의 제안은 거졀되었습니다.
+
+            {% endif %}
+        {% else %}
+
+                상대방은 당신에게 전체 {{ Constants.endowment }} 중 {{ group.amount_offered }} 만큼을 제안했습니다.
+
+            {% if group.offer_accepted %}
+
+                    당신은 그 제안을 수용했습니다.
+
+            {% else %}
+
+                    당신은 그 제안을 거절했습니다.
+
+            {% endif %}
+        {% endif %}
+    </p>
+
+    <p>
+
+            따라서 당신의 수익은 {{ player.payoff }} 입니다.
+
+    </p>
+
+    {% next_button %}
+    <!-- {% include Constants.instructions_template %} -->
+
+
+{% endblock %}
