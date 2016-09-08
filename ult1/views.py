@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from otree.api import Currency as c, currency_range
 from . import models
 from ._builtin import Page, WaitPage
