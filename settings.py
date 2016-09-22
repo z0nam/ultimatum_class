@@ -67,7 +67,7 @@ LANGUAGE_CODE = 'ko'
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
 INSTALLED_APPS = ['otree']
 
-# SENTRY_DSN = ''
+SENTRY_DSN = 'http://27aac549e20541819058886d708d97c0:70b605ee46314e27b7f69c25289810a0@sentry.otree.org/74'
 
 
 ROOMS = [
@@ -129,7 +129,7 @@ SESSION_CONFIGS = [
 		'display_name': "최후통첩게임(전략버젼)",
 		'num_demo_participants':2,
 		'app_sequence': ['ult2'],
-	},	
+	},
 ]
 
 # anything you put after the below line will override
