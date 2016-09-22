@@ -31,10 +31,7 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def before_session_start(self):
         for g in self.get_groups():
-            if 'treatment' in self.session.config:
-                g.strategy = self.session.config['treatment'] == 'strategy'
-            else:
-                g.strategy = random.choice([True,False])
+            g.strategy = self.session.config['treatment'] == 'strategy'
 
 
 class Group(BaseGroup):
