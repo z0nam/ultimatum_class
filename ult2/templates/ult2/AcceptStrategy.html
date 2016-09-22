@@ -1,0 +1,45 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+        당신의 역할과 결정
+        <!-- Your role and decision -->
+
+{% endblock %}
+
+{% block content %}
+
+    <p>
+            당신은 <strong>음답자</strong> 입니다.
+            <!-- You are the <strong>responder</strong>. -->
+
+    </p>
+
+    <p>
+            제안자는 당신에게 {{ Constants.endowment }}를 어떻게 분배할 것인지 제안할 것입니다.
+            <!-- The proposer will make you an offer on how to divide the {{ Constants.endowment }}. -->
+
+    </p>
+
+    <p>
+            상대의 가능한 모든 제안들에 대해 자신이 취할 행동을 골라보세요.
+            <!-- Please choose below how you would respond to each of the possible offers. -->
+
+    </p>
+
+    {% formfield group.response_0 with label="당신은 0 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_100 with label="당신은 100 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_200 with label="당신은 200 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_300 with label="당신은 300 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_400 with label="당신은 400 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_500 with label="당신은 500 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_600 with label="당신은 600 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_700 with label="당신은 700 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_800 with label="당신은 800 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_900 with label="당신은 900 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_1000 with label="당신은 1000 ECU를 제안받으면 수용하겠습니까?" %}
+
+        {% next_button %}
+
+
+{% endblock %}

@@ -24,7 +24,7 @@ ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 
 # don't share this with anybody.
-SECRET_KEY = '{{ secret_key }}'
+SECRET_KEY = '{{ ;fxlbyea  }}'
 
 # To use a database other than sqlite,
 # set the DATABASE_URL environment variable.
@@ -72,13 +72,9 @@ INSTALLED_APPS = ['otree']
 
 ROOMS = [
     {
-        'name': 'evoGame2016khu',
-        'display_name': '진화게임협력2016경희대',
+        'name': 'evo2016khu',
+        'display_name': '진화게임협력 2016 가을 경희대',
 	'participant_label_file': '_rooms/evo2016khu.txt',
-    },
-    {
-        'name': 'live_demo',
-        'display_name': 'Room for live demo (no participant labels)',
     },
 ]
 
@@ -127,7 +123,13 @@ SESSION_CONFIGS = [
 		'display_name': "최후통첩게임",
 		'num_demo_participants': 2,
 		'app_sequence': ['ult1'],
-	}
+	},
+	{
+		'name': 'ult2',
+		'display_name': "최후통첩게임(전략버젼)",
+		'num_demo_participants':2,
+		'app_sequence': ['ult2'],
+	},	
 ]
 
 # anything you put after the below line will override
