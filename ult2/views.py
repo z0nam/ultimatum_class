@@ -16,9 +16,17 @@ class WaitForProposer(WaitPage):
     pass
 
 
-class Accept(Page):
+# class Accept(Page):
+#     form_model = models.Group
+#     form_fields = ['offer_accepted']
+#
+#     def is_displayed(self):
+#         return self.player.id_in_group == 2
+
+class AcceptStrategy(Page):
     form_model = models.Group
-    form_fields = ['offer_accepted']
+    form_fields = ['response_{}'.format(int(i)) for i in
+                    Constants.offer_choices]
 
     def is_displayed(self):
         return self.player.id_in_group == 2
