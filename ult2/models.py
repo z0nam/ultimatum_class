@@ -60,9 +60,8 @@ class Group(BaseGroup):
     def set_payoffs(self):
         p1,p2 = self.get_players()
 
-        if self.strategy:
-            self.offer_accepted = getattr(self, 'response_{}'.format(
-                int(self.amount_offered)))
+        self.offer_accepted = getattr(self, 'response_{}'.format(
+            int(self.amount_offered)))
 
         if self.offer_accepted:
             p1.payoff = Constants.endowment - self.amount_offered
