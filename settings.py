@@ -130,6 +130,12 @@ SESSION_CONFIGS = [
 		'num_demo_participants':2,
 		'app_sequence': ['ult2'],
 	},
+	{
+		'name': 'pd',
+		'display_name': "죄수의 딜레마",
+		'num_demo_participants':2,
+		'app_sequence': ['pd'],
+	},
 ]
 
 # anything you put after the below line will override
