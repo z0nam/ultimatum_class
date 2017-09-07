@@ -74,8 +74,13 @@ ROOMS = [
     {
         'name': 'evo2016khu',
         'display_name': '진화게임협력 2016 가을 경희대',
-	'participant_label_file': '_rooms/evo2016khu.txt',
+	    'participant_label_file': '_rooms/evo2016khu.txt',
     },
+	{
+	    'name': 'evo2017fkhu_1',
+		'display_name': '진화게임협력 2017 가을 경희대(0907)',
+		'participant_label_file': '_rooms/evokhu_2017f_0907.txt',
+	},
 ]
 
 
