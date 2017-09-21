@@ -15,7 +15,7 @@ doc = """
 class Constants(BaseConstants):
     name_in_url = 'ult1'
     players_per_group = 2
-    num_rounds = 1
+    num_rounds = 4
 
     endowment = c(1000)
     payoff_if_rejected=c(0)
@@ -31,14 +31,13 @@ class Constants(BaseConstants):
 class Subsession(BaseSubsession):
     def before_session_start(self):
         for g in self.get_groups():
-            if 'treatment' in self.session.config:
-                g.strategy = self.session.config['treatment'] == 'strategy'
-            else:
-                g.strategy = random.choice([True,False])
-
+            g.use_strategy = self.session.config['use_strategy']
+    
+    def creating_session(self):
+        self.group_randomly()
 
 class Group(BaseGroup):
-    strategy = models.BooleanField(
+    use_strategy = models.BooleanField(
         doc="""전략방식을 썼는지 여부"""
     )
     
@@ -63,7 +62,7 @@ class Group(BaseGroup):
     def set_payoffs(self):
         p1,p2 = self.get_players()
         
-        if self.strategy:
+        if self.use_strategy:
             self.offer_accepted = getattr(self, 'response_{}'.format(
                 int(self.amount_offered)))
             

@@ -71,15 +71,15 @@ SENTRY_DSN = 'http://27aac549e20541819058886d708d97c0:70b605ee46314e27b7f69c2528
 
 
 ROOMS = [
-    {
-        'name': 'evo2016khu',
-        'display_name': '진화게임협력 2016 가을 경희대',
-	    'participant_label_file': '_rooms/evo2016khu.txt',
-    },
+    # {
+    #     'name': 'evo2016khu',
+    #     'display_name': '진화게임협력 2016 가을 경희대',
+    #         'participant_label_file': '_rooms/evo2016khu.txt',
+    # },
 	{
 	    'name': '2017f',
-		'display_name': '진화게임협력 2017 가을 경희대(0907)',
-		'participant_label_file': '_rooms/evokhu_2017f_0907.txt',
+		'display_name': '진화게임협력 2017 가을 경희대 (최종)',
+		'participant_label_file': '_rooms/evokhu_2017f_final.txt',
 	},
 ]
 
@@ -124,15 +124,17 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
 	{
-		'name': 'ult1',
-		'display_name': "최후통첩게임",
-		'num_demo_participants': 2,
-		'app_sequence': ['ult1'],
+		'name': 'ult_0922',
+		'display_name': "최후통첩게임(직접제안버젼4R+전략버젼4R, 풀랜덤) 2017.9.22",
+		'num_demo_participants': 4,
+        'use_strategy': False,
+		'app_sequence': ['ult1','ult2'],
 	},
 	{
-		'name': 'ult2',
-		'display_name': "최후통첩게임(전략버젼)",
+		'name': 'ult_strategy',
+		'display_name': "최후통첩게임(전략버젼), 4R 랜덤",
 		'num_demo_participants':2,
+        'use_strategy': True,
 		'app_sequence': ['ult2'],
 	},
 	{
