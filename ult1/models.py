@@ -29,9 +29,9 @@ class Constants(BaseConstants):
         keep_give_amounts.append((offer, endowment - offer))
 
 class Subsession(BaseSubsession):
-    def before_session_start(self):
-        for g in self.get_groups():
-            g.use_strategy = self.session.config['use_strategy']
+    # def before_session_start(self):
+    #     for g in self.get_groups():
+    #         g.use_strategy = self.session.config['use_strategy']
     
     def creating_session(self):
         self.group_randomly()
