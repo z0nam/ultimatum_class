@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    결과
+{% endblock %}
+
+{% block content %}
+
+<p>
+
+
+
+{% if player.role == "남편" %}
+
+    당신의 선택은 <strong>{{player.decision}}</strong> 였고, 상대방인 아내의 선택은
+    <strong>{{player.other_player.decision}}</strong> 였습니다. 그 결과 이번 라운드의 보상은
+    <strong>{{player.payoff}}</strong> 입니다. 
+
+{% else %}
+
+    당신의 선택은 <strong>{{player.decision}}</strong> 였고, 상대방인 남편의 선택은
+    <strong>{{player.other_player.decision}}</strong> 였습니다. 그 결과 이번 라운드의 보상은
+    <strong>{{player.payoff}}</strong> 입니다.
+
+{% endif %}
+</p>
+
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}

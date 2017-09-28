@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Decide
+{% endblock %}
+
+{% block content %}
+
+
+<p>
+    당신은 <strong>{{ player.role }}</strong> 입니다. 오늘 저녁 당신은 어떤 선택을 하시겠습니까?
+</p>
+
+    {% formfield player.decision with label='당신의 선택은:' %}
+    {% next_button %}
+
+    {% include Constants.instructions_template %}
+
+{% endblock %}
