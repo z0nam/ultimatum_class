@@ -14,7 +14,7 @@ Continuous Prisoner's Dilemma (fixed partner, 10 rounds)
 class Constants(BaseConstants):
     name_in_url = 'pd'
     players_per_group = 2
-    num_rounds = 1
+    num_rounds = 10
 
     betray_payoff = c(40)
     betrayed_payoff = c(10)

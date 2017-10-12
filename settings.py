@@ -126,7 +126,7 @@ SESSION_CONFIGS = [
 	{
 		'name': 'ult_0922',
 		'display_name': "최후통첩게임(직접제안버젼4R+전략버젼4R, 풀랜덤) 2017.9.22",
-		'num_demo_participants': 4,
+		'num_demo_participants': 2,
         'use_strategy': False,
 		'app_sequence': ['ult1','ult2'],
 	},
@@ -139,7 +139,7 @@ SESSION_CONFIGS = [
 	},
 	{
 		'name': 'pd',
-		'display_name': "죄수의 딜레마",
+		'display_name': "죄수의 딜레마 (고정파트너,10R)",
 		'num_demo_participants':2,
 		'app_sequence': ['pd'],
 	},
