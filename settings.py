@@ -149,6 +149,12 @@ SESSION_CONFIGS = [
 		'num_demo_participants':2,
 		'app_sequence': ['battleSex'],
 	},
+    {
+        'name': 'pd_indirect',
+        'display_name': "죄수의 딜레마 평판버젼 (랜덤파트너,5R,상대의 협조횟수표시)",
+        'num_demo_participants':2,
+        'app_sequence': ['pd_indirect']
+    },
 ]
 
 # anything you put after the below line will override
