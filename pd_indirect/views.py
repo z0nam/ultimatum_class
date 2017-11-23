@@ -11,6 +11,7 @@ class Decision(Page):
     def vars_for_template(self):
         return{
             'other_player_num_coop': self.player.other_player().get_coop,
+            'num_prev_round': self.subsession.round_number-1,
         }
 
 

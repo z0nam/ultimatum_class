@@ -62,7 +62,7 @@ class Player(BasePlayer):
     def get_coop(self):
         """이전 라운드까지의 협조 횟수를 돌려준다."""
         num_coop = 0
-        for p in self.player.in_previous_rounds():
+        for p in self.in_previous_rounds():
             if p.decision=="Cooperate":
                 num_coop+=1
         return num_coop
