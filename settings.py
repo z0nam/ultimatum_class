@@ -76,10 +76,15 @@ ROOMS = [
     #     'display_name': '진화게임협력 2016 가을 경희대',
     #         'participant_label_file': '_rooms/evo2016khu.txt',
     # },
+    # {
+    #     'name': '2017f',
+    #     'display_name': '진화게임협력 2017 가을 경희대 (최종)',
+    #     'participant_label_file': '_rooms/evokhu_2017f_final.txt',
+    # },
 	{
-	    'name': '2017f',
-		'display_name': '진화게임협력 2017 가을 경희대 (최종)',
-		'participant_label_file': '_rooms/evokhu_2017f_final.txt',
+	    'name': '2018f',
+		'display_name': '진화게임협력 2018 가을 경희대',
+		'participant_label_file': '_rooms/stuList_evokhu_2018f.txt',
 	},
 ]
 
@@ -124,8 +129,21 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
 	{
+		'name': 'ult_1R',
+		'display_name': "최후통첩게임(1R)",
+		'num_demo_participants': 2,
+        'use_strategy': False,
+		'app_sequence': ['ult'],
+	},
+	{
+		'name': 'pd_1R',
+		'display_name': "죄수의 딜레마(1R)",
+		'num_demo_participants': 2,
+		'app_sequence': ['pd_1r'],
+	},
+	{
 		'name': 'ult_0922',
-		'display_name': "최후통첩게임(직접제안버젼4R+전략버젼4R, 풀랜덤) 2017.9.22",
+		'display_name': "최후통첩게임(직접제안버젼4R+전략버젼4R, 풀랜덤)",
 		'num_demo_participants': 2,
         'use_strategy': False,
 		'app_sequence': ['ult1','ult2'],

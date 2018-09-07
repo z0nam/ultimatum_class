@@ -1,0 +1,33 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+
+        당신의 역할과 결정
+
+{% endblock %}
+
+{% block content %}
+
+    <p>
+
+            당신은 <strong>응답자</strong> 입니다.
+
+    </p>
+
+    <p>
+
+            상대방이 당신에게 {{ group.amount_offered }} 만큼을 제안했습니다.
+
+    </p>
+
+    <div class="form-group required">
+        <label class="control-label">이 제안을 수용하시겠습니까?</label>
+        <div class="controls">
+            <button name="offer_accepted" value="True" class="btn btn-primary btn-large">예</button>
+            <button name="offer_accepted" value="False" class="btn btn-primary btn-large">아니요</button>
+        </div>
+    </div>
+
+
+{% endblock %}
