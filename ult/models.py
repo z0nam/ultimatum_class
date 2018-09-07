@@ -33,8 +33,8 @@ class Subsession(BaseSubsession):
     #     for g in self.get_groups():
     #         g.use_strategy = self.session.config['use_strategy']
     
-    def creating_session(self):
-        self.group_randomly()
+#    def creating_session(self):
+#        self.group_randomly()
 
 class Group(BaseGroup):
     use_strategy = models.BooleanField(
