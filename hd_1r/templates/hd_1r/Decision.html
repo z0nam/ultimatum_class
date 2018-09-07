@@ -1,0 +1,73 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    행동 결정
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+<style>
+    .highlight-row-on-hover:hover td {
+        background-color: #fcf8e3;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<p>
+  현재 라운드는 총 {{ Constants.num_rounds }} 중 {{ subsession.round_number }} 입니다.
+</p>
+
+    <div class="form-group required">
+      <table class = "table table-bordered text-center" style="width: auto; margin: auto">
+        <tr>
+          <th colspan="2" rowspan="2">
+
+          </th>
+          <th colspan="2">
+            상대방
+          </th>
+        </tr>
+        <tr>
+          <th>
+            겁쟁이 (Dove)
+          </th>
+          <th>
+            돌진 (Hawk)
+          </th>
+        </tr>
+        <tr class="highlight-row-on-hover">
+          <th rowspan="2">
+            <span class="rotate90">본인(me)</span>
+          </th>
+          <td>
+            <button name="decision" value="겁쟁이" class="btn btn-primary btn-large">나: 겁쟁이</button>
+          </td>
+          <td>
+            {{Constants.both_dove_payoff}},{{Constants.both_dove_payoff}}
+          </td>
+          <td>
+            {{Constants.dove_payoff}},{{Constants.hawk_payoff}}
+          </td>
+        </tr>
+        <tr class="highlight-row-on-hover">
+          <td>
+            <button name="decision" value="돌진" class="btn btn-primary btn-large">나: 돌진</button>
+          </td>
+          <td>
+            {{Constants.hawk_payoff}},{{Constants.dove_payoff}}
+          </td>
+          <td>
+            {{Constants.both_hawk_payoff}},{{Constants.both_hawk_payoff}}
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+{% endblock %}

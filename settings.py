@@ -142,6 +142,12 @@ SESSION_CONFIGS = [
 		'app_sequence': ['pd_1r'],
 	},
 	{
+		'name': 'hd_1R',
+		'display_name': "겁쟁이게임(1R)",
+		'num_demo_participants': 2,
+		'app_sequence': ['hd_1r'],
+	},
+	{
 		'name': 'ult_0922',
 		'display_name': "최후통첩게임(직접제안버젼4R+전략버젼4R, 풀랜덤)",
 		'num_demo_participants': 2,

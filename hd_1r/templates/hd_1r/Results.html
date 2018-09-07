@@ -1,0 +1,23 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+  결과
+{% endblock %}
+
+{% block content %}
+
+  <p>
+    {% if same_choice %}
+      당신과 상대방은 모두 다음과 같이 결정했습니다: {{ my_decision }}
+    {% else %}
+      당신은 {{ my_decision }} 을 선택했고, 상대방은 {{ other_player_decision }}을 선택했습니다.
+    {% endif %}
+  </p>
+
+  <p>
+    그 결과, 당신은 이번 라운드에서 {{ player.payoff }} 를 획득했습니다.
+  </p>
+
+    {% next_button %}
+{% endblock %}
