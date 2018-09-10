@@ -84,10 +84,9 @@ ROOMS = [
 	{
 	    'name': '2018f',
 		'display_name': '진화게임협력 2018 가을 경희대',
-		'participant_label_file': '_rooms/stuList_evokhu_2018f.txt',
+		'participant_label_file': '_rooms/stuList_evokhu_2018f_final.txt',
 	},
-]
-
+] 
 
 # from here on are qualifications requirements for workers
 # see description for requirements on Amazon Mechanical Turk website:
