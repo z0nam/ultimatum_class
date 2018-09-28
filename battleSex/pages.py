@@ -10,7 +10,7 @@ class Introduction(Page):
 
 
 class Decide(Page):
-    form_model = models.Player
+    form_model = 'player'
     form_fields = ['decision']
 
 

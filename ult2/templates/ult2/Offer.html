@@ -1,5 +1,5 @@
 {% extends "global/Base.html" %}
-{% load staticfiles otree_tags %}
+{% load staticfiles otree %}
 
 
 {% block title %}
@@ -22,7 +22,7 @@
 
     </p>
 
-    {% formfield group.amount_offered with label="얼마를 제안할 것인가요?" %}
+    {% formfield group.amount_offered label="얼마를 제안할 것인가요?" %}
 
     {% next_button %}
 

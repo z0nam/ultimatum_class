@@ -36,7 +36,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    decision = models.CharField(
+    decision = models.StringField(
         choices = ['Cooperate', 'Defect'],
         doc = """현재 경기자의 결정""",
         widget = widgets.RadioSelect()

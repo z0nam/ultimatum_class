@@ -1,5 +1,5 @@
 {% extends "global/Base.html" %}
-{% load staticfiles otree_tags %}
+{% load staticfiles otree %}
 
 {% block title %}
         당신의 역할과 결정
@@ -27,17 +27,17 @@
 
     </p>
 
-    {% formfield group.response_0 with label="당신은 0 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_100 with label="당신은 100 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_200 with label="당신은 200 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_300 with label="당신은 300 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_400 with label="당신은 400 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_500 with label="당신은 500 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_600 with label="당신은 600 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_700 with label="당신은 700 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_800 with label="당신은 800 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_900 with label="당신은 900 ECU를 제안받으면 수용하겠습니까?" %}
-    {% formfield group.response_1000 with label="당신은 1000 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_0 label="당신은 0 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_100 label="당신은 100 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_200 label="당신은 200 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_300 label="당신은 300 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_400 label="당신은 400 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_500 label="당신은 500 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_600 label="당신은 600 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_700 label="당신은 700 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_800 label="당신은 800 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_900 label="당신은 900 ECU를 제안받으면 수용하겠습니까?" %}
+    {% formfield group.response_1000 label="당신은 1000 ECU를 제안받으면 수용하겠습니까?" %}
 
         {% next_button %}
 

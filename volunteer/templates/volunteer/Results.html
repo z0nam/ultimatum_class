@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    게임 결과
+{% endblock %}
+
+{% block content %}
+    <p>
+      당신은 {{my_decision}}
+      {% if dead %}
+      경희아파트 주민들(총 {{total_members}}명)은 아무도 전화를 걸지 않았습니다.
+      {% else %}
+      경희아파트 주민 {{total_members}}명 중 {{total_call}}명이 전화를 걸었습니다.
+      {% endif %}
+    </p>
+
+    <p>
+      그 결과, 당신은 이번 라운드에서 {{player.payoff}}를 획득했습니다.
+    </p>
+
+    {% next_button %}
+{% endblock %}

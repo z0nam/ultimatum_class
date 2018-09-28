@@ -154,6 +154,12 @@ SESSION_CONFIGS = [
 		'app_sequence': ['ult1','ult2'],
 	},
 	{
+		'name': 'volunteer',
+		'display_name': "Volunteer Dilemma (전체그룹, 10R)",
+		'num_demo_participants':3,
+		'app_sequence': ['volunteer'],
+	},
+	{
 		'name': 'ult_strategy',
 		'display_name': "최후통첩게임(전략버젼), 4R 랜덤",
 		'num_demo_participants':2,
