@@ -1,0 +1,73 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    복점 기업의 행동 결정
+{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+<style>
+    .highlight-row-on-hover:hover td {
+        background-color: #fcf8e3;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<p>
+  현재 라운드는 총 {{ Constants.num_rounds }} 중 {{ subsession.round_number }} 입니다.
+</p>
+
+    <div class="form-group required">
+      <table class = "table table-bordered text-center" style="width: auto; margin: auto">
+        <tr>
+          <th colspan="2" rowspan="2">
+
+          </th>
+          <th colspan="2">
+            상대 기업
+          </th>
+        </tr>
+        <tr>
+          <th>
+            담합한 수량 생산 (생산량: 30)
+          </th>
+          <th>
+            담합을 깨고 더 많이 생산 (생산량: 40)
+          </th>
+        </tr>
+        <tr class="highlight-row-on-hover">
+          <th rowspan="2">
+            <span class="rotate90">본인의 기업</span>
+          </th>
+          <td>
+            <button name="decision" value="담합" class="btn btn-primary btn-large">담합한 대로 30만큼 생산한다</button>
+          </td>
+          <td>
+            나:{{Constants.both_cooperate_payoff}},상대:{{Constants.both_cooperate_payoff}}
+          </td>
+          <td>
+            나:{{Constants.betrayed_payoff}},상대:{{Constants.betray_payoff}}
+          </td>
+        </tr>
+        <tr class="highlight-row-on-hover">
+          <td>
+            <button name="decision" value="담합파기" class="btn btn-primary btn-large">담합을 어기고 40만큼 생산한다</button>
+          </td>
+          <td>
+            {{Constants.betray_payoff}},{{Constants.betrayed_payoff}}
+          </td>
+          <td>
+            {{Constants.both_defect_payoff}},{{Constants.both_defect_payoff}}
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+{% endblock %}

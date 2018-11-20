@@ -146,6 +146,12 @@ SESSION_CONFIGS = [
 		'app_sequence': ['pd_1r'],
 	},
 	{
+		'name': 'oligopoly',
+		'display_name': "복점 게임 (1R)",
+		'num_demo_participants':2,
+		'app_sequence': ['oligopoly'],
+	},
+	{
 		'name': 'hd_1R',
 		'display_name': "겁쟁이게임(1R)",
 		'num_demo_participants': 2,
