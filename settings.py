@@ -91,6 +91,11 @@ ROOMS = [
 		'display_name': '세한경 2018 가을 고려대',
 		'participant_label_file': '_rooms/StdList_ECON151.txt',
 	},
+	{
+	    'name': 'WjShin_2018f',
+		'display_name': '신우진 2018 가을',
+		'participant_label_file': '_rooms/wjshin_2018f.txt',
+	},
 ] 
 
 # from here on are qualifications requirements for workers
