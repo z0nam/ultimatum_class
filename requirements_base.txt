@@ -1,2 +1,1 @@
 otree>=2.1.25
-psycopg2
