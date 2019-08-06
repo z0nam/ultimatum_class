@@ -91,10 +91,15 @@ ROOMS = [
 		'display_name': '세한경 2018 가을 고려대',
 		'participant_label_file': '_rooms/StdList_ECON151.txt',
 	},
+	# {
+	#     'name': 'WjShin_2018f',
+	# 	'display_name': '신우진 2018 가을',
+	# 	'participant_label_file': '_rooms/wjshin_2018f.txt',
+	# },
 	{
-	    'name': 'WjShin_2018f',
-		'display_name': '신우진 2018 가을',
-		'participant_label_file': '_rooms/wjshin_2018f.txt',
+	    'name': 'WjShin_201908',
+		'display_name': '신우진 2019 여름',
+		'participant_label_file': '_rooms/wjshin_201908.txt',
 	},
 ] 
 
@@ -206,6 +211,12 @@ SESSION_CONFIGS = [
         'display_name': "죄수의 딜레마 평판버젼 (랜덤파트너,5R,상대의 협조횟수표시)",
         'num_demo_participants':2,
         'app_sequence': ['pd_indirect']
+    },
+	{
+        'name': 'composite_wjshin',
+        'display_name': "최후통첩 -> 죄수의딜레마(1R) -> 죄수의딜레마(10R)",
+        'num_demo_participants':2,
+        'app_sequence': ['ult', 'pd_1r', 'pd']
     },
 ]
 
